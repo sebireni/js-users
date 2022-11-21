@@ -1,0 +1,33 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+.footer .footer__link--github {
+  display: flex;
+  align-items: center;
+  color: #1E1E1E;
+  padding-bottom: 2rem;
+}
+.footer .footer__link--github:hover {
+  transform: scale(120%);
+  transition-duration: 300ms;
+}
+.footer .footer__link--dina {
+  display: flex;
+  align-items: center;
+  color: #1E1E1E;
+  padding-bottom: 2rem;
+  padding-right: 40px;
+}
+.footer .footer__link--dina .footer__link--dina__arrow {
+  color: #1E1E1E;
+}
+.footer .footer__link--dina:hover {
+  transition-duration: 300ms;
+  transform: scale(120%);
+}/*# sourceMappingURL=Footer.css.map */

@@ -1,0 +1,52 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 50px;
+
+    .footer__link--github {
+        display: flex;
+        align-items: center;
+        color: #1E1E1E;
+        padding-bottom: 2rem;
+    }
+    
+    .footer__link--github:hover {
+        transform: scale(120%);
+        transition-duration: 300ms;
+    }
+
+    @media screen and (max-width: 896px) {
+        .footer__link--github {
+        //   display: none;
+        }
+    }
+
+    .footer__link--dina {
+        display: flex;
+        align-items: center;
+        color: #1E1E1E;
+        padding-bottom: 2rem;
+        padding-right: 40px;
+
+        .footer__link--dina__arrow {
+            color: #1E1E1E;
+        }
+    }
+
+    .footer__link--dina:hover {
+        transition-duration: 300ms;
+        transform: scale(120%);
+    }
+
+    // @media screen and (max-width: 896px) {
+    //     .footer__link--dina {
+    
+    //         .footer__link--dina__arrow {
+
+    //         }
+    //     }
+    // }
+}

@@ -1,0 +1,13 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+.navbar .navbar__ul {
+  display: flex;
+  justify-content: flex-start;
+}
+.navbar .navbar__ul .navbar__ul__li {
+  padding: 20px;
+}/*# sourceMappingURL=Navbar.css.map */
