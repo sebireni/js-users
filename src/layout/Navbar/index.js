@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
 import HomeIcon from '@mui/icons-material/Home';
 
@@ -8,16 +8,16 @@ const Navbar = () => {
     <nav className='navbar'>
       <ul className='navbar__ul'>
         <li className='navbar__ul__li'>
-          <Link to='/'><HomeIcon fontSize='large' /></Link>
+          <NavLink className='navbar__ul__li__link' to='/'><HomeIcon fontSize='large' /></NavLink>
         </li>
         <li className='navbar__ul__li'>
-          <Link to='/users'>Users list</Link>
+          <NavLink className='navbar__ul__li__link' to='/users'>Users list</NavLink>
         </li>
         <li className='navbar__ul__li'>
-          <Link to='/new'>Add new user</Link>
+          <NavLink className='navbar__ul__li__link' to='/new'>Add new user</NavLink>
         </li>
         <li className='navbar__ul__li'>
-          <Link to='/edit'>Edit users</Link>
+          <NavLink className='navbar__ul__li__link' to='/edit'>Edit users</NavLink>
         </li>
       </ul>
     </nav>

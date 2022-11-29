@@ -15,9 +15,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path='/' element={<Home/>} />
-          <Route exact path='/users' element={<Users/>} />
-          <Route exact path='/new' element={<NewUser/>} />
-          <Route wxact path='/edit' element={<EditUser/>} />
+          <Route path='/users' element={<Users/>} />
+          <Route path='/new' element={<NewUser/>} />
+          <Route path='/edit' element={<EditUser/>} />
         </Routes>
         <Footer />
       </Router>

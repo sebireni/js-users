@@ -5,7 +5,7 @@
   background: transparent;
   outline: none;
   text-decoration: none;
-  font-family: "Inter", sans-serif;
+  font-family: "Raleway", sans-serif;
   box-sizing: border-box;
 }
 
@@ -37,10 +37,16 @@ textarea {
 
 html {
   font-size: 62.5%;
+  height: 100%;
 }
 
 body {
   font-size: 1.6rem;
+  height: 100%;
+}
+
+html, body {
+  background: #f8f8f8;
 }
 
 div {
