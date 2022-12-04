@@ -8,6 +8,10 @@
   padding-bottom: 15px;
 }
 
+.btn-success {
+  margin-right: 10px;
+}
+
 .pagination {
   list-style: none;
   display: flex;

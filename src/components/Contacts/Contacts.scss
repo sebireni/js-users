@@ -15,12 +15,6 @@
         transition-duration: 300ms;
     }
 
-    @media screen and (max-width: 896px) {
-        .contact__link--github {
-        //   display: none;
-        }
-    }
-
     .contact__link--dina {
         display: flex;
         align-items: center;
@@ -35,13 +29,4 @@
         transition-duration: 300ms;
         transform: scale(120%);
     }
-
-    // @media screen and (max-width: 896px) {
-    //     .footer__link--dina {
-    
-    //         .footer__link--dina__arrow {
-
-    //         }
-    //     }
-    // }
 }

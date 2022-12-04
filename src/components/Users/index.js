@@ -17,7 +17,25 @@ const Users = (props) => {
     // const usertoedit = data.find(obj => obj.id === user.id);
     // console.log(usertoedit);
     // console.log(user.id);
-  }
+  };
+
+
+  // status update should be handled seperatly (from edit action), needs work!
+
+  // const [status, setStatus] = useState('');
+  // const [id, setId] = useState('');
+  // const toggleStatus = (userid, previousStatus) => {
+  //   if (previousStatus === 'active') {
+  //     setStatus('locked')
+  //   } else {
+  //     setStatus('active')
+  //   }
+  //   setId(userid);
+  // };
+  // const update = (id, status) => {
+  //   //fetch....
+  // };
+  
 
   const [currentUsers, setCurrentUsers] = useState([]);
   const [pageCount, setPageCount] = useState(0);
@@ -58,11 +76,12 @@ const Users = (props) => {
               { data &&
                 currentUsers.map(user => (
                   <tr key={user.id}>
-                    <td>{user.first_name}</td>
-                    <td>{user.last_name}</td>
-                    <td>{user.created_at}</td>
+                    <td style={ user.status === 'locked' ? { textDecorationLine: 'line-through'} : {}}>{user.first_name}</td>
+                    <td style={ user.status === 'locked' ? { textDecorationLine: 'line-through'} : {}}>{user.last_name}</td>
+                    <td style={ user.status === 'locked' ? { textDecorationLine: 'line-through'} : {}}>{user.created_at}</td>
                     <td>
                       <a onClick={() => { LoadEdit(user) }} className="btn btn-success">Edit</a>
+                      {/* <a onClick={toggleStatus(user.id, user.status)} className="btn btn-success">Update</a> */}
                     </td> 
                   </tr>
                 ))
