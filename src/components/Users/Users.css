@@ -1,3 +1,33 @@
+.card-title {
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
 .divbtn {
   float: left;
+  padding-bottom: 15px;
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding-top: 15px;
+}
+.pagination .page-num {
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: 400;
+  color: #333;
+  text-decoration: none;
+}
+.pagination .page-num:hover {
+  background-color: #999;
+  color: white;
+}
+.pagination .active {
+  background-color: #999;
 }/*# sourceMappingURL=Users.css.map */
