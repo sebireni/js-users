@@ -1,26 +1,33 @@
 .navbar {
+  font-family: "Amatic SC", cursive;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   color: #333;
-  font-family: "Amatic SC", cursive;
 }
 .navbar .navbar__ul {
   display: flex;
   justify-content: flex-start;
-  font-family: "Amatic SC", cursive;
 }
 .navbar .navbar__ul .navbar__ul__li {
-  font-family: "Amatic SC", cursive;
   padding: 15px;
   margin: auto;
 }
-.navbar .navbar__ul .navbar__ul__li .navbar__ul__li__link:hover {
+.navbar .navbar__ul .navbar__ul__li .navbar__ul__li__link {
+  font-family: "Amatic SC", cursive;
+  font-size: 1.8rem;
   color: #999;
+  text-decoration: none;
+}
+.navbar .navbar__ul .navbar__ul__li .navbar__ul__li__link:hover {
+  color: #333;
 }
 .navbar .navbar__ul .navbar__ul__li .active {
-  color: #999;
+  color: #333;
   text-decoration: underline;
-  text-underline-offset: 10px;
+  text-decoration-thickness: 1px;
+  -webkit-text-decoration-color: #999;
+          text-decoration-color: #999;
+  text-underline-offset: 12px;
 }/*# sourceMappingURL=Navbar.css.map */
