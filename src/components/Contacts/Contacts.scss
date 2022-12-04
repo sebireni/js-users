@@ -1,42 +1,37 @@
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
+.contact {
     display: flex;
     justify-content: flex-end;
     column-gap: 50px;
+    padding-top: 50px;
 
-    .footer__link--github {
+    .contact__link--github {
         display: flex;
         align-items: center;
-        color: #1E1E1E;
-        padding-bottom: 2rem;
+        color: #999;
     }
     
-    .footer__link--github:hover {
+    .contact__link--github:hover {
         transform: scale(120%);
         transition-duration: 300ms;
     }
 
     @media screen and (max-width: 896px) {
-        .footer__link--github {
+        .contact__link--github {
         //   display: none;
         }
     }
 
-    .footer__link--dina {
+    .contact__link--dina {
         display: flex;
         align-items: center;
-        color: #1E1E1E;
-        padding-bottom: 2rem;
-        padding-right: 40px;
+        color: #999;
 
-        .footer__link--dina__arrow {
-            color: #1E1E1E;
+        .contact__link--dina__arrow {
+            color: #999;
         }
     }
 
-    .footer__link--dina:hover {
+    .contact__link--dina:hover {
         transition-duration: 300ms;
         transform: scale(120%);
     }

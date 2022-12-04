@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './layout/Navbar';
-import Footer from './layout/Footer';
 import Home from './pages/Home';
 import Users from './pages/Users';
 import NewUser from './pages/NewUser';
@@ -19,7 +18,6 @@ function App() {
           <Route path='/new' element={<NewUser/>} />
           <Route path='/edit' element={<EditUser/>} />
         </Routes>
-        <Footer />
       </Router>
     </div>
     
