@@ -4,8 +4,9 @@ import './App.css';
 import Navbar from './layout/Navbar';
 import Home from './pages/Home';
 import Users from './pages/Users';
-import NewUser from './pages/NewUser';
-import EditUser from './pages/EditUser';
+import NewUser from './components/NewUser';
+import EditUser from './components/EditUser';
+import DetailUser from './components/DetailUser';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
           <Route exact path='/' element={<Home/>} />
           <Route path='/users' element={<Users/>} />
           <Route path='/new' element={<NewUser/>} />
-          <Route path='/edit' element={<EditUser/>} />
+          <Route path='/edit/:userid' element={<EditUser/>} />
+          <Route path='/detail/:userid' element={<DetailUser/>} />
         </Routes>
       </Router>
     </div>
