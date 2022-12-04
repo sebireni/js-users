@@ -21,6 +21,8 @@ const NewUser = () => {
       setStatus('locked')
     };
 
+    // post needs work!
+
     const userdata={firstname, lastname, status};
 
     fetch("https://assessment-users-backend.herokuapp.com/users",{
@@ -72,14 +74,14 @@ const NewUser = () => {
                 <div className='row'>
                   <div className='col-lg-12'>
                     <div className='form-group'>
-                      <label>First Name</label> {firstname.length==0 && validationFirstname && <span className="text-danger">!Enter First Name</span>}
+                      <label>First Name</label> {firstname.length===0 && validationFirstname && <span className="text-danger">!Enter First Name</span>}
                       <input required value={firstname} onMouseDown={e=>setValidationFirstname(true)} onChange={e=>setFirstname(e.target.value)} className='form-control'></input>
                     </div>
                   </div>
 
                   <div className='col-lg-12'>
                     <div className='form-group'>
-                      <label>Last Name</label> {lastname.length==0 && validationLastname && <span className="text-danger">!Enter Last Name</span>}
+                      <label>Last Name</label> {lastname.length===0 && validationLastname && <span className="text-danger">!Enter Last Name</span>}
                       <input required value={lastname} onMouseDown={e=>setValidationLastname(true)} onChange={e=>setLastname(e.target.value)} className='form-control'></input>
                     </div>
                   </div>

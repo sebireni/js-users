@@ -5,12 +5,17 @@ import './Users.css';
 
 const Users = () => {
   const [userdata, setUserdata] = useState(null);
-  //const [usertoedit, setUsertoedit] = useState(null);
   const navigate = useNavigate();
 
-  const LoadEdit=(id) => {
-    navigate('/users/edit/'+id);
-    //const object = userdata.find(obj => obj.id === id);
+  // const LoadEdit=(id) => {
+  //   navigate('/users/edit/'+id);
+  // }
+
+  const LoadEdit=(item) => {
+    navigate('/edit/', { state: {user: item}});
+    // const usertoedit = userdata.find(obj => obj.id === item.id);
+    // console.log(usertoedit);
+    // console.log(item.id);
   }
 
    useEffect(() => {
@@ -63,7 +68,7 @@ const Users = () => {
                     <td>{item.last_name}</td>
                     <td>{item.created_at}</td>
                     <td>
-                      <a onClick={() => { LoadEdit(item.id) }} className="btn btn-success">Edit</a>
+                      <a onClick={() => { LoadEdit(item) }} className="btn btn-success">Edit</a>
                     </td>
                     
                   </tr>
