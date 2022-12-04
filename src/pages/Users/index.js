@@ -4,14 +4,40 @@ import './Users.css';
 
 const Users = () => {
 
-  // //alap
+  const [data, setData] = useState(null);
 
-  // const [data, setData] = useState(null);
-  // const [loading, setLoading] = useState(true);
-  // const [error, setError] = useState(null);
+   useEffect(() => {
+    fetch(`https://assessment-users-backend.herokuapp.com/users`,
+    {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(
+            `This is an HTTP error: The status is ${response.status}`
+          );
+        }
+        return response.json();
+      })
+      .then((actualData) => setData(actualData))
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
 
-  //  useEffect(() => {
-  //   fetch(`https://assessment-users-backend.herokuapp.com`)
+  console.log(data);
+
+  // useEffect(() => {
+  //   fetch(`https://assessment-users-backend.herokuapp.com/users`,
+  //   {
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     method: 'POST',
+  //     body: {first_name: 'Bela', last_name: 'Test', status: 'active'}
+  //   })
   //     .then((response) => {
   //       if (!response.ok) {
   //         throw new Error(
@@ -25,58 +51,6 @@ const Users = () => {
   //       console.log(err.message);
   //     });
   // }, []);
-
-  // //alap2
-
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         `https://assessment-users-backend.herokuapp.com`
-  //       );
-  //       setData(response.data);
-  //       setError(null);
-  //     } catch (err) {
-  //       setError(err.message);
-  //       setData(null);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   getData();
-  // }, []);
-
-
-  
-
-  ///régebbiekből kiindulva..
-
-// const handleSubmit = async () => {
-//   const { email, password } = values;
-//   const { data, error } = await axios({
-//     url: 'https://assessment-users-backend.herokuapp.com',
-//     method: 'POST',
-//     headers: {
-  //      'Content-Type': 'application/json'
-
-//     },
-//   },
-//   {  
-//     email, 
-//     password
-//   })
-
-  // await axios({
-  //   url: 'https://assessment-users-backend.herokuapp.com',
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-Type': 'application/json'
-  //   },
-  //   data: ,
-  // })
-  // .then((res) => { })
-  // .catch((err) => { })
-
   
   return (
     <div className='users'>This is the USERS page
