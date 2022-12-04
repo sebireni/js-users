@@ -1,11 +1,17 @@
 import React, {useState, useEffect} from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
+//import axios from 'axios';
 import './Users.css';
 
 const Users = () => {
-
   const [userdata, setUserdata] = useState(null);
+  //const [usertoedit, setUsertoedit] = useState(null);
+  const navigate = useNavigate();
+
+  const LoadEdit=(id) => {
+    navigate('/users/edit/'+id);
+    //const object = userdata.find(obj => obj.id === id);
+  }
 
    useEffect(() => {
     fetch(`https://assessment-users-backend.herokuapp.com/users`,
@@ -29,29 +35,6 @@ const Users = () => {
   }, []);
 
   console.log(userdata);
-
-  // useEffect(() => {
-  //   fetch(`https://assessment-users-backend.herokuapp.com/users`,
-  //   {
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     },
-  //     method: 'POST',
-  //     body: {first_name: 'Bela', last_name: 'Test', status: 'active'}
-  //   })
-  //     .then((response) => {
-  //       if (!response.ok) {
-  //         throw new Error(
-  //           `This is an HTTP error: The status is ${response.status}`
-  //         );
-  //       }
-  //       return response.json();
-  //     })
-  //     .then((actualData) => console.log(actualData))
-  //     .catch((err) => {
-  //       console.log(err.message);
-  //     });
-  // }, []);
   
   return (
     <div className='container'>
@@ -80,7 +63,7 @@ const Users = () => {
                     <td>{item.last_name}</td>
                     <td>{item.created_at}</td>
                     <td>
-                      <a className='btn btn-success'>Edit</a>
+                      <a onClick={() => { LoadEdit(item.id) }} className="btn btn-success">Edit</a>
                     </td>
                     
                   </tr>

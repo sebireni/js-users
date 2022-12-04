@@ -9,14 +9,12 @@
 .navbar .navbar__ul {
   display: flex;
   justify-content: flex-start;
-  -moz-column-gap: 3%;
-       column-gap: 3%;
   font-family: "Amatic SC", cursive;
 }
 .navbar .navbar__ul .navbar__ul__li {
   font-family: "Amatic SC", cursive;
   padding: 15px;
-  font-family: "Amatic SC", cursive;
+  margin: auto;
 }
 .navbar .navbar__ul .navbar__ul__li .navbar__ul__li__link:hover {
   color: #999;

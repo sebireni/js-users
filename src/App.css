@@ -35,10 +35,6 @@ textarea {
   resize: none;
 }
 
-html, body {
-  background: #f8f8f8;
-}
-
 div {
   box-sizing: border-box;
 }

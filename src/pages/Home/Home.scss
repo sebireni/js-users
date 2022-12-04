@@ -1,8 +1,9 @@
 .home {
-  padding-top: 70px;
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  //background: #f8f8f8;
 
   .home__h1, .home__h2 {
     font-family: 'Amatic SC', cursive;
@@ -24,13 +25,4 @@
     padding-top: 50px;
     text-align: center;
   }
-
-  // .home__img {
-  //   max-height: 400px;
-  //   position: absolute;
-  //   rotate: 10%;
-  //   bottom: 0;
-  //   left: -70px;
-  //   transform: rotate(-30deg);
-  // }
 }

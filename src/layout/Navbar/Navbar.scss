@@ -5,17 +5,17 @@
     width: 100vw;
     color: #333;
     font-family: 'Amatic SC', cursive;
+    //background: #f8f8f8;
 
     .navbar__ul {
         display: flex;
         justify-content: flex-start;
-        column-gap: 3%;
         font-family: 'Amatic SC', cursive;
 
         .navbar__ul__li {
             font-family: 'Amatic SC', cursive;
             padding: 15px;
-            font-family: 'Amatic SC', cursive;
+            margin: auto;
 
             .navbar__ul__li__link {
                 &:hover {

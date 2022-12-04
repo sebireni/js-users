@@ -11,13 +11,7 @@ const Navbar = () => {
           <NavLink className='navbar__ul__li__link' to='/'><HomeIcon fontSize='large' /></NavLink>
         </li>
         <li className='navbar__ul__li'>
-          <NavLink className='navbar__ul__li__link' to='/users'>Users list</NavLink>
-        </li>
-        <li className='navbar__ul__li'>
-          <NavLink className='navbar__ul__li__link' to='/new'>Add new user</NavLink>
-        </li>
-        <li className='navbar__ul__li'>
-          <NavLink className='navbar__ul__li__link' to='/edit'>Edit users</NavLink>
+          <Link className='navbar__ul__li__link' to='/users'>Users list</Link>
         </li>
       </ul>
     </nav>
