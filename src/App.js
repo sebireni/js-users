@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './layout/Navbar';
 import Home from './pages/Home';
-import Users from './pages/Users';
+import UsersList from './pages/UsersList';
 import NewUser from './components/NewUser';
 import EditUser from './components/EditUser';
 
@@ -14,7 +14,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path='/' element={<Home/>} />
-          <Route path='/users' element={<Users/>} />
+          <Route path='/users' element={<UsersList/>} />
           <Route path='/new' element={<NewUser/>} />
           {/* <Route path='/edit/:userid' element={<EditUser/>} /> */}
           <Route path='/edit' element={<EditUser/>} />
